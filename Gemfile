@@ -8,6 +8,11 @@ end
 gem 'cancancan', '~> 2.0'
 gem 'bootstrap-sass', '~> 3.3', '>= 3.3.7'
 gem 'devise', '~> 4.3'
+gem 'figaro', '~> 1.1', '>= 1.1.1'
+gem 'faker', '~> 1.8', '>= 1.8.4'
+gem 'omniauth', '~> 1.7', '>= 1.7.1'
+gem 'omniauth-google', '~> 1.0', '>= 1.0.2'
+gem 'omniauth-facebook', '~> 4.0'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.4'
 # Use postgresql as the database for Active Record
