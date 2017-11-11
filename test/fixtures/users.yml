@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  pto_role: false
+  admin_role: false
+  pictures: MyString
+
+two:
+  name: MyString
+  pto_role: false
+  admin_role: false
+  pictures: MyString
