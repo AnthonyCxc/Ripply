@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Riply</title>
     <%= csrf_meta_tags %>
 
@@ -8,9 +11,16 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body>
-  	<p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
-    <%= yield %>
+  <body data-spy="scroll" data-target="#site-nav">
+    <%= render partial: "shared/navbar" %>
+     <div class="container">
+      <% if notice %>
+        <div class="alert alert-info"><%= notice %></div>
+      <% end %>
+      <% if alert %>
+        <div class="alert alert-warning"><%= alert %></div>
+      <% end %>
+      </div>
+    <%= yield %> 
   </body>
 </html>
