@@ -14,12 +14,10 @@ gem 'omniauth'
 gem 'omniauth-facebook'
 gem "omniauth-google-oauth2", "~> 0.2.1"
 gem 'jquery-turbolinks'
-gem 'multi-dates-picker-rails' 
 gem 'carrierwave', github: 'carrierwaveuploader/carrierwave'
 gem 'sdoc'  
 gem 'jquery-rails'
 gem 'sprockets-rails', :require => 'sprockets/railtie'
-gem 'autoprefixer-rails'
 gem 'braintree'
 
 Things you may want to cover:
