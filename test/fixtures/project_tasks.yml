@@ -1,17 +1,13 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  project_id: one
-  user_id: one
   task_title: MyString
   task_description: MyString
-  approved_by_admin: one
-  approved_by_pto: one
+  project: one
+  user: one
 
 two:
-  project_id: two
-  user_id: two
   task_title: MyString
   task_description: MyString
-  approved_by_admin: two
-  approved_by_pto: two
+  project: two
+  user: two

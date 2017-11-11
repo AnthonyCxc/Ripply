@@ -3,15 +3,15 @@
 one:
   project_title: MyString
   project_description: MyString
-  approved_by_admin: one
-  approved_by_pto: one
-  cause_status: 1
+  project_status: 1
   pictures: MyString
+  approved_by_admin: false
+  approved_by_pto: false
 
 two:
   project_title: MyString
   project_description: MyString
-  approved_by_admin: two
-  approved_by_pto: two
-  cause_status: 1
+  project_status: 1
   pictures: MyString
+  approved_by_admin: false
+  approved_by_pto: false
