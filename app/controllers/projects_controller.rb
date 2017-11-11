@@ -7,11 +7,7 @@ class ProjectsController < ApplicationController
   end
 
   def show 
-    @listing = ProjectCause.find(params[:id])
-    # @donation = Donation.where(project_id: params[:id])
-    @total_donation = 85
-    # @total_donation = @donation.sum(:donation_amount)
-    @progress_percent = (@total_donation.to_f / @listing.donation_goal.to_f * 100.0).to_i
+    @listing = Project.find(params[:id])
   end
 
   def new
