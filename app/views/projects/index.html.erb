@@ -1,2 +1,16 @@
-<h1>Projects#index</h1>
-<p>Find me in app/views/projects/index.html.erb</p>
+<h1>Project in funding phases</h1>
+<% @listings_vote.each do |x| %>
+	<h2><%= link_to x.project_title, project_path(x.id)  %></h2>
+	<p>Donation goal: <%= x.donation_goal %></p>
+<%end%>
+
+<h1>Project in motion</h1>
+<% @listings_working.each do |y|%>
+	<h2><%= link_to x.project_title, project_path(x.id)%></h2>
+	<p>Donation goal: <%= x.donation_goal%></p>
+<% end %>
+
+<h1>Project completed</h1>
+<% @listings_complete.each do |t| %>
+	<h2><%= link_to t.project_title, project_path(t.id) %></h2>
+<%end%>
