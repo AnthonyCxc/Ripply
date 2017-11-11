@@ -1,16 +1,19 @@
 Rails.application.routes.draw do
-<<<<<<< HEAD
-=======
-  devise_for :users
-  root to: "users#index"
 
-  get 'donations/index'
->>>>>>> master
-
-  devise_for :installs
   root 'users#index'
 
+  devise_for :users
+
+  get 'donations/index'
+
+  devise_for :installs
+  
   resources 'projects'
+
+  get 'braintree/new'
+
+  post 'braintree/checkout'
+
   # get 'donations/index'
 
   # get 'donations/new'
