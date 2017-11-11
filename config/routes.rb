@@ -1,4 +1,11 @@
 Rails.application.routes.draw do
+<<<<<<< HEAD
+=======
+  devise_for :users
+  root to: "users#index"
+
+  get 'donations/index'
+>>>>>>> master
 
   devise_for :installs
   root 'users#index'
