@@ -1,4 +1,4 @@
 class ProjectTask < ApplicationRecord
-  has_many :projects
+  belongs_to :projects
   has_many :users
 end
