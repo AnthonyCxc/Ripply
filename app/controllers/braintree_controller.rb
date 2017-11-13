@@ -8,7 +8,7 @@ class BraintreeController < ApplicationController
   		nonce_from_the_client = params[:checkout_form][:payment_method_nonce]
 
 	  	result = Braintree::Transaction.sale(
-	   	:amount => "10.00", #this is currently hardcoded
+	   	:amount => "10.00", #this is currently hardcoded. put in current_user.donation.donation_amount
 	   	:payment_method_nonce => nonce_from_the_client,
 	   	:options => {
 	      	:submit_for_settlement => true
@@ -16,9 +16,9 @@ class BraintreeController < ApplicationController
 	  	 )
 
   		if result.success?
-	    	redirect_to :root, :flash => { :success => "Transaction successful!" }
+	    	redirect_to :root, :flash => { :success => "Transaction successful!" } #redirect to voting once payment is successful
 	  	else
-	    	redirect_to :root, :flash => { :error => "Transaction failed. Please try again." }
+	    	redirect_to :root, :flash => { :error => "Transaction failed. Please try again." } #redirect to listing if payment is un_sucessful
 	  	end
 	end
 end

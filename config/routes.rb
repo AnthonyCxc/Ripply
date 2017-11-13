@@ -14,6 +14,8 @@ Rails.application.routes.draw do
 
   post 'braintree/checkout'
 
+  resources 'donations'
+
   # get 'donations/index'
 
   # get 'donations/new'
