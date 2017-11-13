@@ -4,7 +4,6 @@ class CreateUsers < ActiveRecord::Migration[5.1]
       t.string :name
       t.boolean :pto_role
       t.boolean :admin_role
-      t.string :pictures
 
       t.timestamps
     end
