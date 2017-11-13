@@ -1,2 +1,39 @@
-<h1>Projects#index</h1>
-<p>Find me in app/views/projects/index.html.erb</p>
+<h1>Project in funding phases</h1>
+<% @listings_vote.each do |x| %>
+	<h2><%= link_to x.project_title, project_path(x.id)  %></h2>
+<%end%>
+
+<h1>Project in motion</h1>
+<% @listings_working.each do |y|%>
+	<h2><%= link_to y.project_title, project_path(y.id)%></h2>
+<% end %>
+
+<h1>Project completed</h1>
+<% @listings_complete.each do |t| %>
+	<h2><%= link_to t.project_title, project_path(t.id) %></h2>
+<%end%>
+
+<!-- Start of Async Drift Code -->
+<script>
+!function() {
+  var t;
+  if (t = window.driftt = window.drift = window.driftt || [], !t.init) return t.invoked ? void (window.console && console.error && console.error("Drift snippet included twice.")) : (t.invoked = !0, 
+  t.methods = [ "identify", "config", "track", "reset", "debug", "show", "ping", "page", "hide", "off", "on" ], 
+  t.factory = function(e) {
+    return function() {
+      var n;
+      return n = Array.prototype.slice.call(arguments), n.unshift(e), t.push(n), t;
+    };
+  }, t.methods.forEach(function(e) {
+    t[e] = t.factory(e);
+  }), t.load = function(t) {
+    var e, n, o, i;
+    e = 3e5, i = Math.ceil(new Date() / e) * e, o = document.createElement("script"), 
+    o.type = "text/javascript", o.async = !0, o.crossorigin = "anonymous", o.src = "https://js.driftt.com/include/" + i + "/" + t + ".js", 
+    n = document.getElementsByTagName("script")[0], n.parentNode.insertBefore(o, n);
+  });
+}();
+drift.SNIPPET_VERSION = '0.3.1';
+drift.load('2cma9n7w7bxu');
+</script>
+<!-- End of Async Drift Code -->

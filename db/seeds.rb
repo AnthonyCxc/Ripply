@@ -5,3 +5,17 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+project= {}
+
+ActiveRecord::Base.transaction do
+  20.times do
+  	project['project_title'] = Faker::App.name
+  	project['project_description'] = Faker::Hipster.sentence
+  	project['project_status'] = rand(0..3)
+  	project['approved_by_admin'] = [true, false].sample
+  	project['approved_by_pto'] = [true, false].sample
+
+  	Project.create(project)
+  end
+end

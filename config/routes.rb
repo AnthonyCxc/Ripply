@@ -1,6 +1,18 @@
 Rails.application.routes.draw do
+
+  root 'users#index'
+
   devise_for :users
-  # root to: "users#index"
+
+  devise_for :installs
+  
+  resources 'projects'
+
+  get 'braintree/new'
+
+  post 'braintree/checkout'
+
+  resources 'donations'
 
   # get 'donations/index'
 
@@ -47,6 +59,6 @@ Rails.application.routes.draw do
   # get 'users/update'
 
   # get 'users/destroy'
-  root 'users#index'
+  
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
